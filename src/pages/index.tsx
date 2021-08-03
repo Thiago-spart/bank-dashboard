@@ -1,3 +1,11 @@
+import { HeadTitle } from "../components/HeadTitle";
+
 export default function Home() {
-  return <h1>Hello mundo</h1>;
+  return (
+    <>
+      <HeadTitle title="Home" />
+
+      <h1>Hello mundo</h1>
+    </>
+  );
 }
