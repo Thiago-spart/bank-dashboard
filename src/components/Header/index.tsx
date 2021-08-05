@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MoneyDetails } from "../MoneyDetails";
 import { AccountSection } from "./components/AccountSection";
 import { UserSection } from "./components/UserSection";
 
@@ -16,7 +17,15 @@ export const Header = () => {
             height="21"
           />
         </Logo>
+
         <AccountSection />
+        <MoneyDetails
+          titleSize="12"
+          amountSize="16"
+          title="saldo"
+          amount="40000"
+        />
+
         <UserSection />
       </ContainerContent>
     </Container>
