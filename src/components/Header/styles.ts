@@ -11,7 +11,7 @@ export const ContainerContent = styled.header`
 	margin: 0 1rem;
 	padding: 0 2rem;
 	position: relative;
-
+	gap: 2rem;
 	display: flex;
 	align-items: center;
 	`

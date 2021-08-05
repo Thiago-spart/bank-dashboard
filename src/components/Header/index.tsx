@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AccountSection } from "./components/AccountSection";
 
 import { Container, ContainerContent, Logo } from "./styles";
 
@@ -14,6 +15,7 @@ export const Header = () => {
             height="21"
           />
         </Logo>
+        <AccountSection />
       </ContainerContent>
     </Container>
   );
