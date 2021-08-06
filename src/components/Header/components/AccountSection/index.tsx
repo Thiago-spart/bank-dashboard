@@ -1,44 +1,16 @@
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { RiFileCopyLine } from "react-icons/ri";
+import { Popover } from "../../../Popover";
 
 import {
-  AccountAgency,
   AccountDetails,
-  CheckingAccount,
+  Button,
   Container,
   CopyDiv,
   DropdownCard,
   AccountTitle,
 } from "./styles";
-
-const Accounts = [
-  {
-    accountType: "Conta Corrente",
-    agency: "Ag. 00005-1",
-    accountNumber: "C.C. 00000000000000000020-1",
-  },
-  {
-    accountType: "Conta Poupança",
-    agency: "Ag. 00005-1",
-    accountNumber: "C.C. 01010010001000010000-2",
-  },
-  {
-    accountType: "C.C. Ed. Suzano",
-    agency: "Ag. 00005-1",
-    accountNumber: "C.C. 000000000000015-1",
-  },
-  {
-    accountType: "C.C. Condomínio Guillermo",
-    agency: "Ag. 00005-1",
-    accountNumber: "C.C. 00000000000000017-1",
-  },
-  {
-    accountType: "C.C. Residencial Figma Ômega",
-    agency: "Ag. 00005-1",
-    accountNumber: "C.C. 0000000000000000019-1",
-  },
-];
 
 export const AccountSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -51,7 +23,7 @@ export const AccountSection = () => {
     <Container>
       <AccountTitle onClick={handleIsDropdownOpen}>
         Conta Corrente
-        {isDropdownOpen ? <IoIosArrowDown /> : <IoIosArrowUp />}
+        {isDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </AccountTitle>
       <DropdownCard isDropdownOpen={isDropdownOpen}>
         <li>
@@ -68,29 +40,37 @@ export const AccountSection = () => {
         </li>
       </DropdownCard>
       <AccountDetails>
-        <AccountAgency
-          onClick={() => {
-            navigator.clipboard.writeText("Ag. 00005-1");
-          }}
-        >
-          Ag. 00005-1
-        </AccountAgency>
-        <CheckingAccount
-          onClick={() => {
-            navigator.clipboard.writeText("C.C. 00000000000000000020-1");
-          }}
-        >
-          C.C. 00000000000000000020-1
-        </CheckingAccount>
-        <CopyDiv
-          onClick={() => {
-            navigator.clipboard.writeText(
-              "Ag. 00005-1 C.C. 00000000000000000020-1"
-            );
-          }}
-        >
-          <RiFileCopyLine />
-        </CopyDiv>
+        <Popover message="Copiar">
+          <Button
+            onClick={() => {
+              navigator.clipboard.writeText("Ag. 00005-1");
+            }}
+          >
+            Ag. 00005-1
+          </Button>
+        </Popover>
+
+        <Popover message="Copiar">
+          <Button
+            onClick={() => {
+              navigator.clipboard.writeText("C.C. 00000000000000000020-1");
+            }}
+          >
+            C.C. 00000000000000000020-1
+          </Button>
+        </Popover>
+
+        <Popover message="Copiar tudo" messageSize="big">
+          <CopyDiv
+            onClick={() => {
+              navigator.clipboard.writeText(
+                "Ag. 00005-1 C.C. 00000000000000000020-1"
+              );
+            }}
+          >
+            <RiFileCopyLine />
+          </CopyDiv>
+        </Popover>
       </AccountDetails>
     </Container>
   );

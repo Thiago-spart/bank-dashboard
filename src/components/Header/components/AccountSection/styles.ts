@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const DropdownCard = styled.ul<{ isDropdownOpen: boolean }>`
-	display: ${({ isDropdownOpen }) => (isDropdownOpen ? "none" : "flex")};
+	display: ${({ isDropdownOpen }) => (isDropdownOpen ? "flex" : "none")};
 	flex-direction: column;
 	position: absolute;
 	bottom: -175px;
@@ -57,16 +57,12 @@ export const AccountDetails = styled.div`
 	align-items: center;
 `
 
-const Button = styled.button`
+export const Button = styled.button`
 	border: none;
 	background: transparent;
 	color: var(--primary);
 	font-size: 0.85rem;
 `
-
-export const AccountAgency = styled(Button)``
-
-export const CheckingAccount = styled(Button)``
 
 export const CopyDiv = styled(Button)`
 	color: var(--dark-blue);
