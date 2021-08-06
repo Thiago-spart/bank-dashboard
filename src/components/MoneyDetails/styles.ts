@@ -6,7 +6,7 @@ export const Container = styled.div`
 	gap: 0.15rem;
 `
 
-export const Title = styled.span<{ TitleSize: string }>`
+export const Title = styled.span<{ TitleSize?: string }>`
 	display: flex;
 	align-items: center;
 	font-size: ${({ TitleSize }) => TitleSize + "px"};
