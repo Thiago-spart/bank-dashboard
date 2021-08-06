@@ -1,11 +1,16 @@
 import { HeadTitle } from "../components/HeadTitle";
 
+import { Container } from "../../styles/home";
+import { LateralMenu } from "../components/LateralMenu";
+
 export default function Home() {
   return (
     <>
       <HeadTitle title="Home" />
 
-      <h1>Hello mundo</h1>
+      <Container>
+        <LateralMenu />
+      </Container>
     </>
   );
 }
