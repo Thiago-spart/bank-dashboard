@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
 	display: flex;
 	align-items: center;
-	width: 100%;
+	width: 2500px;
 	height: 3rem;
 	box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
 
