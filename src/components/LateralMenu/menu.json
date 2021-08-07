@@ -1,0 +1,65 @@
+{
+	"navMenu": [
+		{
+			"linkName": "home",
+			"path": "#/",
+			"iconPath": "/images/HouseLine.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "dashboard",
+			"path": "#/dashboard",
+			"iconPath": "/images/ChartPieSlice.svg",
+			"isActive": true,
+			"isSelected": true
+		},
+		{
+			"linkName": "saldo",
+			"path": "#/saldo",
+			"iconPath": "/images/ChartLineUp.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "extrato",
+			"path": "#/extrato",
+			"iconPath": "/images/Money.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "pagamento",
+			"path": "#/pagamento",
+			"iconPath": "/images/Handshake.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "pix",
+			"path": "#/pix",
+			"iconPath": "/images/Group.svg",
+			"isActive": false
+		},
+		{
+			"linkName": "cartão",
+			"path": "#/cartao",
+			"iconPath": "/images/CreditCard.svg",
+			"isActive": false
+		},
+		{
+			"linkName": "cobrança",
+			"path": "#/cobranca",
+			"iconPath": "/images/Receipt.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "gerenciamento",
+			"path": "#/gerenciamento",
+			"iconPath": "/images/Wrench.svg",
+			"isActive": true
+		},
+		{
+			"linkName": "ajuda",
+			"path": "#/ajuda",
+			"iconPath": "/images/Question.svg",
+			"isActive": true
+		}
+	]
+}
