@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 
 		--dark-blue:#172765;
 		--green: #69D531;
+		--white: #ffffff;
 	}
 
 	@media (max-width: 1080px) {

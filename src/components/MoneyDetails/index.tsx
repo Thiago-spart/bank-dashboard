@@ -2,7 +2,13 @@ import { formatValues } from "../../utils/formatValues";
 
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-import { Amount, Container, Title } from "./styles";
+import {
+  Container,
+  Amount,
+  DetailContainer,
+  Title,
+  ImgContainer,
+} from "./styles";
 import { useState } from "react";
 
 interface MoneyDetailsProps {
@@ -10,6 +16,8 @@ interface MoneyDetailsProps {
   amountSize: string;
   title: string;
   amount: string;
+  moneyImg?: boolean;
+  imgTheme?: number;
 }
 
 export const MoneyDetails = ({
@@ -17,6 +25,8 @@ export const MoneyDetails = ({
   amountSize,
   title,
   amount,
+  moneyImg,
+  imgTheme = 1,
 }: MoneyDetailsProps) => {
   const [viewMoney, setViewMoney] = useState(false);
 
@@ -25,14 +35,18 @@ export const MoneyDetails = ({
   }
 
   return (
-    <Container onClick={toggleViewMoney}>
-      <Title TitleSize={titleSize}>
-        {title}
-        {viewMoney ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
-      </Title>
-      <Amount AmountSize={amountSize}>
-        {viewMoney ? "Saldo" : formatValues(Number(amount))}
-      </Amount>
+    <Container>
+      {moneyImg && <ImgContainer imgTheme={imgTheme}>{title[0]}</ImgContainer>}
+
+      <DetailContainer onClick={toggleViewMoney}>
+        <Title TitleSize={titleSize}>
+          {title}
+          {viewMoney ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+        </Title>
+        <Amount AmountSize={amountSize} visibility={viewMoney}>
+          {formatValues(Number(amount))}
+        </Amount>
+      </DetailContainer>
     </Container>
   );
 };

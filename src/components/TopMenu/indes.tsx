@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MoneyDetails } from "../MoneyDetails";
 import { Popover } from "../Popover";
 import { WalletCard } from "./components/WalletCard";
 
@@ -28,6 +29,33 @@ export const TopMenu = () => {
           />
         </NewWalletButton>
       </Popover>
+
+      <MoneyDetails
+        titleSize="14"
+        amountSize="14"
+        title="principal"
+        amount="10000"
+        moneyImg
+        imgTheme={1}
+      />
+
+      <MoneyDetails
+        titleSize="14"
+        amountSize="14"
+        title="aluguel"
+        amount="40000"
+        moneyImg
+        imgTheme={2}
+      />
+
+      <MoneyDetails
+        titleSize="14"
+        amountSize="14"
+        title="alimentação"
+        amount="40000"
+        moneyImg
+        imgTheme={3}
+      />
     </Container>
   );
 };
