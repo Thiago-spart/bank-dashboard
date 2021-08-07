@@ -12,8 +12,6 @@ interface NavMenuProps {
   isSelected?: boolean;
 }
 
-console.log(navMenu);
-
 export const LateralMenu = () => {
   return (
     <NavBar>
