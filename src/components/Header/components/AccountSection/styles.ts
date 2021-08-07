@@ -9,6 +9,7 @@ export const Container = styled.div`
 
 export const DropdownCard = styled.ul<{ isDropdownOpen: boolean }>`
 	display: ${({ isDropdownOpen }) => (isDropdownOpen ? "flex" : "none")};
+	z-index: 10;
 	flex-direction: column;
 	position: absolute;
 	bottom: -175px;
