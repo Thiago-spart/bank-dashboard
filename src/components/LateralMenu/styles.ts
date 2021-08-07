@@ -28,7 +28,7 @@ export const NavLink = styled.a<{ isActive: boolean, isSelected?: boolean }>`
 		position: absolute;
 		z-index: 1;
 		content: "";
-		right: calc(23% - 10px);
+		right: calc(22.6% - 10px);
 		bottom: -4px;
 		border-style: solid;
 		border-width: 4px 0 0 4px;
@@ -39,7 +39,7 @@ export const NavLink = styled.a<{ isActive: boolean, isSelected?: boolean }>`
 		position: absolute;
 		z-index: 1;
 		content: "";
-		right: calc(23% - 10px);
+		right: calc(22.6% - 10px);
 		top: -4px;
 		border-style: solid;
 		border-width: 0 0 4px 4px;
