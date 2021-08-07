@@ -18,7 +18,7 @@ export const TopMenu = () => {
         </WalletButton>
       </WalletCard>
 
-      <Popover message="Nova alocação">
+      <Popover messageSize="big" message="Nova alocação">
         <NewWalletButton type="button">
           <Image
             src="/images/PlusCircle.svg"
