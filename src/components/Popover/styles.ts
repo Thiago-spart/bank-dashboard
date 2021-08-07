@@ -15,15 +15,17 @@ export const Container = styled.div<{ messageSize: string }>`
 		opacity: 0;
 		visibility: hidden;
 		position: absolute;
-    left: 0;
+    left: 5px;
     bottom: 110%;
 		background-color: #ffffff;
     padding: ${({ messageSize }) => messageSize === "big" ? "0.5rem 1.5rem" : "0.5rem"};
-    display: flex;
+    width: ${({ messageSize }) => messageSize === "big" && "8.5rem"};
+		display: flex;
     gap: 0.25rem;
     font-size: 0.8rem;
     border-radius: 0.25rem;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+		transition: all 0.5s;
 
 		> svg {
 			font-size: 1rem;

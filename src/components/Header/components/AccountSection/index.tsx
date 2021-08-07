@@ -40,7 +40,7 @@ export const AccountSection = () => {
         </li>
       </DropdownCard>
       <AccountDetails>
-        <Popover message="Copiar">
+        <Popover withIcon message="Copiar">
           <Button
             onClick={() => {
               navigator.clipboard.writeText("Ag. 00005-1");
@@ -50,7 +50,7 @@ export const AccountSection = () => {
           </Button>
         </Popover>
 
-        <Popover message="Copiar">
+        <Popover withIcon message="Copiar">
           <Button
             onClick={() => {
               navigator.clipboard.writeText("C.C. 00000000000000000020-1");
@@ -60,7 +60,7 @@ export const AccountSection = () => {
           </Button>
         </Popover>
 
-        <Popover message="Copiar tudo" messageSize="big">
+        <Popover withIcon message="Copiar tudo" messageSize="big">
           <CopyDiv
             onClick={() => {
               navigator.clipboard.writeText(

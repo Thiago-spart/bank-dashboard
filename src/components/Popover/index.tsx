@@ -7,6 +7,7 @@ import { Container } from "./styles";
 interface PopoverProps {
   message: string;
   messageSize?: string;
+  withIcon?: boolean;
   children: ReactNode;
 }
 
@@ -14,12 +15,13 @@ export const Popover = ({
   message,
   messageSize = "Normal",
   children,
+  withIcon = false,
 }: PopoverProps) => {
   return (
     <Container messageSize={messageSize}>
       {children}
       <span>
-        <RiFileCopyLine />
+        {withIcon && <RiFileCopyLine />}
         {message}
       </span>
     </Container>
