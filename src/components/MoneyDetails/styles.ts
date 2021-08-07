@@ -45,9 +45,9 @@ export const Title = styled.span<{ TitleSize?: string }>`
 	} 
 `
 
-export const Amount = styled.span<{ AmountSize: string, visibility: boolean }>`
+export const Amount = styled.span<{ AmountSize: string, visibility: string }>`
 	color: var(--green);
-	visibility: ${({ visibility }) => visibility && "hidden"};
+	visibility: ${({ visibility }) => visibility === "true" ? "hidden" : "auto"};
 	font-weight: 600;
 	font-size: ${({ AmountSize }) => AmountSize + "px"};
 `

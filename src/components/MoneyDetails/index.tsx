@@ -43,7 +43,7 @@ export const MoneyDetails = ({
           {title}
           {viewMoney ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
         </Title>
-        <Amount AmountSize={amountSize} visibility={viewMoney}>
+        <Amount AmountSize={amountSize} visibility={viewMoney.toString()}>
           {formatValues(Number(amount))}
         </Amount>
       </DetailContainer>
