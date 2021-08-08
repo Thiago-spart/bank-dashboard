@@ -13,6 +13,7 @@ import {
   DropdownContainer,
   TitleDiv,
 } from "./styles";
+import { AmountField } from "./components/AmountField";
 
 export const HomeSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -52,6 +53,8 @@ export const HomeSection = () => {
       </TitleDiv>
 
       <LastAmount />
+
+      <AmountField />
     </Container>
   );
 };
