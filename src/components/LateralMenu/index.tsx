@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 import navMenu from "./menu.json";
 
-import { NavBar, NavLink, NavStyles } from "./styles";
+import { ExpandButton, NavBar, NavLink, NavStyles } from "./styles";
 
 interface NavMenuProps {
   linkName: string;
@@ -24,6 +25,11 @@ export const LateralMenu = () => {
           </NavStyles>
         )
       )}
+      <NavStyles>
+        <ExpandButton type="button">
+          <RiArrowRightSLine />
+        </ExpandButton>
+      </NavStyles>
     </NavBar>
   );
 };
