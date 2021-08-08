@@ -5,6 +5,7 @@ export const Container = styled.section`
 	flex-direction: column;
 	gap: 2rem;
 	margin: 2.5rem 2rem;
+	position: relative;
 `
 
 export const TitleDiv = styled.div`
