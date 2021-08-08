@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { LastAmount } from "./components/LastAmount";
+
 import { AiOutlinePrinter } from "react-icons/ai";
 import { RiFileDownloadLine } from "react-icons/ri";
 import { BiShareAlt } from "react-icons/bi";
@@ -48,6 +50,8 @@ export const HomeSection = () => {
           </DropdownContent>
         </DropdownContainer>
       </TitleDiv>
+
+      <LastAmount />
     </Container>
   );
 };
