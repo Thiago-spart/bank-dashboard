@@ -14,12 +14,18 @@ import {
   TitleDiv,
 } from "./styles";
 import { AmountField } from "./components/AmountField";
+import { DonwloadModal } from "./components/DownloadModal";
 
 export const HomeSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   function handleIsDropdownOpen() {
     setIsDropdownOpen(!isDropdownOpen);
+  }
+
+  function handleIsModalVisible() {
+    setIsModalVisible(!isModalVisible);
   }
 
   return (
@@ -29,7 +35,7 @@ export const HomeSection = () => {
         <Bottom type="button">
           <AiOutlinePrinter />
         </Bottom>
-        <Bottom type="button">
+        <Bottom type="button" onClick={handleIsModalVisible}>
           <RiFileDownloadLine />
         </Bottom>
 
@@ -55,6 +61,8 @@ export const HomeSection = () => {
       <LastAmount />
 
       <AmountField />
+
+      <DonwloadModal visible={isModalVisible.toString()} />
     </Container>
   );
 };
